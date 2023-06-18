@@ -25,7 +25,7 @@ if (!function_exists('hex2bin')) {
 		$len = strlen($h);
 		for ($a=0; $a<$len; $a+=2) {
 			if ($a+1 < $len)
-				$r.=chr(hexdec($h{$a}.$h{($a+1)}));
+				$r.=chr(hexdec($h[$a].$h[($a+1)]));
 		}
 	  	return $r;
 	}
